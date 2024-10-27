@@ -56,11 +56,7 @@ public class RoomWalker : MonoBehaviour
 
 	private void Update()
 	{
-		float speed = movementSpeed;
-		foreach(var room in RoomObject.CurrentRooms)
-			speed *= room.LocalTimeSpeed;
-
-		SplineMovement.Speed = speed;
+		SplineMovement.Speed = movementSpeed * RoomObject.TimeScale;
 	}
 
 	public void SetPath(SplineContainer path, float startOffset = 0)

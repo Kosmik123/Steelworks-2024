@@ -36,6 +36,8 @@ public class Room : MonoBehaviour
 
 	public float DeltaTime => localTimeSpeed * Time.deltaTime;
 
+
+
 	public void AddDoor(Door door) => doors.Add(door);
 
 	public bool IsViewed
