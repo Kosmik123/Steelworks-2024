@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 public class TVViewController : MonoBehaviour
@@ -12,10 +13,16 @@ public class TVViewController : MonoBehaviour
 		get => currentlyViewedRoomIndex;
 		set
 		{
+			if (rooms == null)
+				return;
+			
 			int count = rooms.Length;
+			if (count <= 0)
+				return;
+
 			value %= count;
-			value += count; 
-			value %= count;	
+			value += count;
+			value %= count;
 			currentlyViewedRoomIndex = value;
 			RefreshCameras();
 		}
@@ -34,18 +41,26 @@ public class TVViewController : MonoBehaviour
 			rooms[i].IsViewed = i == currentlyViewedRoomIndex;
 	}
 
+	[Button]
 	[ContextMenu("Next Camera")]
 	public void NextCamera() => CurrentlyViewedRoomIndex++;
 	
+	[Button]
 	[ContextMenu("Previous Camera")]
 	public void PreviousCamera() => CurrentlyViewedRoomIndex--;
 
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.yellow;	
-		if (rooms != null && rooms.Length > 0 )
+		if (rooms != null && rooms.Length > 0)
 		{
-			Gizmos.DrawCube(CurrentRoom.transform.position, 2 * Vector3.one);
+			if (CurrentRoom)	
+				Gizmos.DrawCube(CurrentRoom.transform.position, 2 * Vector3.one);
 		}
+	}
+
+	private void OnValidate()
+	{
+		CurrentlyViewedRoomIndex = currentlyViewedRoomIndex;
 	}
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7076846317818438909}
   - component: {fileID: 6254629483567508312}
   - component: {fileID: 3119896740997512854}
-  - component: {fileID: 9183123568241633786}
+  - component: {fileID: 4628487302295464022}
   m_Layer: 0
   m_Name: TV View Camera
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4398259131404390416}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.97654384, z: -0, w: 0.21531877}
-  m_LocalPosition: {x: -2.36, y: 1.827, z: 3.89}
+  m_LocalRotation: {x: 0.00058782025, y: -0.9867946, z: -0.16188526, w: -0.005411413}
+  m_LocalPosition: {x: -1.6176747, y: 3.355, z: 4.473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9183123568241633786
+--- !u!114 &4628487302295464022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

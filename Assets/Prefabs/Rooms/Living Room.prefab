@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586568769114846404, guid: 65ca69de401a42f419f29af08cf01fa5, type: 3}
       propertyPath: m_Name
-      value: Base Room Logic
+      value: Living Room Logic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
