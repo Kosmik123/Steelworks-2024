@@ -4,31 +4,15 @@ using Bipolar;
 using NaughtyAttributes;
 using System.Collections.Generic;
 
-public class GrandpaController : MonoBehaviour
-{
-	[SerializeField]
-	private Grandpa grandpa;
-
-
-
-
-
-
-}
-
+[RequireComponent(typeof(SplineMovement), typeof(RoomObject))]
 public class Grandpa : MonoBehaviour
 {
 	private RoomObject _roomObject;
 	public RoomObject RoomObject => this.GetRequired(ref _roomObject);
+	public Room CurrentRoom => RoomObject.CurrentRoom;
 
-	[SerializeField]
-	private SplineAnimate splineMovement;
-
-	[SerializeField]
-	private GrandpaPath currentPath;
-
-	[SerializeField]
-	private float movementSpeed;
+	private SplineMovement _splineMovement;
+	public SplineMovement SplineMovement => this.GetRequired(ref _splineMovement);
 
 	[Space, SerializeReference]
 	private TransitionData currentTransition = null;
@@ -37,33 +21,60 @@ public class Grandpa : MonoBehaviour
 
 	public bool IsTransitioning => currentTransition != null;
 
+	[SerializeField]
+	private SplineContainer transitionsContainer;
+	public SplineContainer TransitionContainer => transitionsContainer;
+
 	[System.Serializable]
 	private class TransitionData
 	{
-		public GrandpaPath startPath;
+		public Room startRoom;
 		public float startSplineProgress;
 		public Vector3 startPosition;
-		
-		public Vector3 targetPosition;
-		public GrandpaPath targetPath;
-	}
 
-	private void Reset()
-	{
-		splineMovement = GetComponent<SplineAnimate>();
+		public Vector3 targetPosition;
+		public Room targetRoom;
 	}
 
 	private void Start()
 	{
-		splineMovement.ElapsedTime = 0;
+		SetRoom(RoomObject.CurrentRoom);
 	}
 
-	private void Update()
+	public void SetRoom(Room path, float startOffset = 0)
 	{
-		float elapsedTime = splineMovement.ElapsedTime + RoomObject.Room.DeltaTime * movementSpeed;
-		elapsedTime %= splineMovement.Duration;
-		elapsedTime += splineMovement.Duration;
-		elapsedTime %= splineMovement.Duration;
-		splineMovement.ElapsedTime = elapsedTime;
+		RoomObject.CurrentRoom = path;
+		float distance = SplineUtility.GetNearestPoint(CurrentRoom.Spline.Spline,
+			CurrentRoom.transform.InverseTransformPoint(transform.position), out var nearest, out float normalizedProgress);
+		SplineMovement.Path = CurrentRoom.Spline;
+		SplineMovement.ElapsedTime = normalizedProgress * CurrentRoom.Spline.CalculateLength();
+	}
+
+	public void StartTransition(Room targetRoom) => StartTransition(targetRoom, targetRoom.Spline.EvaluatePosition(0));
+
+	public void StartTransition(Room targetRoom, Vector3 targetPosition)
+	{
+		SplineMovement.Path = transitionsContainer;
+		SplineMovement.ElapsedTime = 0;
+		currentTransition = new TransitionData
+		{
+			startRoom = CurrentRoom,
+			startPosition = transform.position,
+			startSplineProgress = SplineMovement.ElapsedTime,
+			targetPosition = targetPosition,
+			targetRoom = targetRoom,
+		};
+		RoomObject.CurrentRoom = null;
+
+		SplineMovement.OnPathEndReached += SplineMovement_OnTransitionEnded;
+	}
+
+	private void SplineMovement_OnTransitionEnded()
+	{
+		SplineMovement.OnPathEndReached -= SplineMovement_OnTransitionEnded;
+		transitionsHistory.Insert(0, currentTransition);
+		SetRoom(currentTransition.targetRoom);
+		currentTransition = null;
+		SplineMovement.enabled = true;
 	}
 }

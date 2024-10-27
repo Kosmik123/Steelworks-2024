@@ -5,10 +5,14 @@ using Bipolar;
 [RequireComponent(typeof(SplineContainer))]
 public class GrandpaPath : MonoBehaviour
 {
-	private SplineComponent _spline;
-	public SplineComponent Spline => this.GetRequired(ref _spline);
-
+	private SplineContainer _spline;
+	public SplineContainer Spline => this.GetRequired(ref _spline);
+	
 	[SerializeField]
 	private PathType type;
-	public PathType Type => type;
+	public virtual PathType Type => type;
+
+	private void Start()
+	{
+	}
 }

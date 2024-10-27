@@ -3,10 +3,10 @@
 public class RoomObject : MonoBehaviour
 {
 	[SerializeField]
-	private Room room;
-	public Room Room
+	private Room currentRoom;
+	public Room CurrentRoom
 	{
-		get => room;
-		set => room = value;
+		get => currentRoom;
+		set => currentRoom = value;
 	}
 }
