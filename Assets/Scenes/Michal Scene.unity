@@ -380,8 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3da819b3630f947b8343bf813d7e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   localTimeSpeed: 1
+  virtualCamera: {fileID: 0}
 --- !u!114 &87818345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 386132840}
   - component: {fileID: 386132845}
   - component: {fileID: 386132844}
+  - component: {fileID: 386132846}
   m_Layer: 0
   m_Name: Kitchen Model
   m_TagString: Untagged
@@ -591,6 +592,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386132839}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &386132846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386132839}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.98, y: 1, z: 0.98}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &430426971
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3da819b3630f947b8343bf813d7e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   localTimeSpeed: 1
+  virtualCamera: {fileID: 0}
 --- !u!114 &430426977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,6 +825,7 @@ GameObject:
   - component: {fileID: 508367740}
   - component: {fileID: 508367742}
   - component: {fileID: 508367741}
+  - component: {fileID: 508367743}
   m_Layer: 0
   m_Name: Living Room Model
   m_TagString: Untagged
@@ -875,6 +898,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508367739}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &508367743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508367739}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.98, y: 1, z: 0.98}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &540432677
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +930,7 @@ GameObject:
   - component: {fileID: 540432678}
   - component: {fileID: 540432683}
   - component: {fileID: 540432682}
+  - component: {fileID: 540432684}
   m_Layer: 0
   m_Name: Living Room Model
   m_TagString: Untagged
@@ -958,6 +1003,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540432677}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &540432684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540432677}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.98, y: 1, z: 0.98}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &916222996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,8 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3da819b3630f947b8343bf813d7e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   localTimeSpeed: 1
+  virtualCamera: {fileID: 0}
 --- !u!114 &916222999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1299,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678c229bcae7dce4fb74c9921b584d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1280054318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1280054321}
+  - component: {fileID: 1280054320}
+  - component: {fileID: 1280054319}
+  m_Layer: 0
+  m_Name: Remote Control
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1280054319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280054318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2802b27a3a148fe4ebe7fbb6bb0a6624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1280054320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280054318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4197011de5b61d24d9e7c7f6ccb3f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grandpaController: {fileID: 1533032069}
+  viewControlller: {fileID: 1631978726}
+  roomControlSettings: {fileID: 11400000, guid: e0be450a1cf2f4144a2af5312dfc2d99, type: 2}
+--- !u!4 &1280054321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280054318}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373125858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1555,7 @@ GameObject:
   - component: {fileID: 1533032067}
   - component: {fileID: 1533032069}
   - component: {fileID: 1533032070}
+  - component: {fileID: 1533032071}
   m_Layer: 0
   m_Name: Grandpa
   m_TagString: Untagged
@@ -1487,10 +1614,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e1aa5ffcd8ce44f8debe5d3e458690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 0.5
+  currentPath: {fileID: 87818345}
   currentTransition:
     rid: -2
   transitionsHistory: []
-  transitionsContainer: {fileID: 1373125859}
   references:
     version: 2
     RefIds:
@@ -1508,7 +1636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d76c09628fc8ae4998efdade0635ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoom: {fileID: 87818343}
+  enteredRoomTriggersCounts: []
 --- !u!114 &1533032069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1535,9 +1663,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 87818345}
-  speed: 1
+  speed: 0.1
   currentElapsedTime: 0
   currentProgress: 0
+--- !u!54 &1533032071
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533032063}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1631978725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631978727}
+  - component: {fileID: 1631978726}
+  m_Layer: 0
+  m_Name: View Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1631978726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631978725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750ff55b07e9181468bd42b500bba86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 87818343}
+  - {fileID: 916222998}
+  - {fileID: 430426975}
+  currentlyViewedRoomIndex: 0
+--- !u!4 &1631978727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631978725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672745305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,3 +2224,5 @@ SceneRoots:
   - {fileID: 1962936844}
   - {fileID: 1672745309}
   - {fileID: 1373125860}
+  - {fileID: 1280054321}
+  - {fileID: 1631978727}

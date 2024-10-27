@@ -13,7 +13,7 @@ public class RemoteControl : MonoBehaviour
 	[Button]
 	public void Play()
 	{
-		viewControlller.CurrentRoom.LocalTimeSpeed = roomControlSettings.NormalTimeSpeed; ;
+		viewControlller.CurrentRoom.LocalTimeSpeed = roomControlSettings.NormalTimeSpeed;
 	}
 
 	[Button]

@@ -1,9 +1,12 @@
-﻿using Cinemachine;
+﻿using Bipolar;
+using Cinemachine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Splines;
 
-public class Room : GrandpaPath
+[RequireComponent(typeof(SplineContainer))]
+public class Room : MonoBehaviour
 {
 	public event System.Action OnLocalTimeSpeedChanged;
 
@@ -22,6 +25,9 @@ public class Room : GrandpaPath
 		}
 	}
 
+	private SplineContainer _path;
+	public SplineContainer Path => this.GetRequired(ref _path);
+
 	[SerializeField]
 	private CinemachineVirtualCamera virtualCamera;
 	public CinemachineVirtualCamera VirtualCamera => virtualCamera;
@@ -36,7 +42,8 @@ public class Room : GrandpaPath
 	{
 		set
 		{
-			virtualCamera.enabled = value;
+			if (virtualCamera)
+				virtualCamera.enabled = value;
 			if (value == false)
 				LocalTimeSpeed = 1;
 		}

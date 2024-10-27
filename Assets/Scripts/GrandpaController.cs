@@ -3,8 +3,8 @@
 public class GrandpaController : MonoBehaviour
 {
 	[SerializeField]
-	private Grandpa grandpa;
-	public Grandpa Grandpa => grandpa;
+	private RoomWalker grandpa;
+	public RoomWalker Grandpa => grandpa;
 
 	private void Update()
 	{
@@ -15,8 +15,11 @@ public class GrandpaController : MonoBehaviour
 	[ContextMenu("Exit Through Door")]
 	public void ExitThroughtNearestDoor()
 	{
-		var currentRoom = grandpa.RoomObject.CurrentRoom;
-		if (currentRoom == null)
+		var currentPath = grandpa.CurrentPath;
+		if (currentPath == null)
+			return;
+
+		if (currentPath.TryGetComponent<Room>(out var currentRoom) == false)
 			return;
 
 		var door = currentRoom.GetNearestDoor(grandpa.transform.position);
@@ -27,8 +30,8 @@ public class GrandpaController : MonoBehaviour
 		if (nextRoom == null)
 			return;
 
-		SplineConnectionUtility.ConnectSplinesThroughtPoint(grandpa.TransitionContainer.Spline, grandpa.CurrentRoom.Spline, 0,
-			grandpa.transform.position, door.transform, nextRoom.Spline, 0);
-		grandpa.StartTransition(nextRoom);
+		SplineConnectionUtility.ConnectSplinesThroughtPoint(grandpa.TransitionContainer.Spline, grandpa.CurrentPath, 0,
+			grandpa.transform.position, door.transform, nextRoom.Path, 0);
+		grandpa.StartTransition(nextRoom.Path);
 	}
 }
