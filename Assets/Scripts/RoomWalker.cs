@@ -62,8 +62,8 @@ public class RoomWalker : MonoBehaviour
 	public void SetPath(SplineContainer path, float startOffset = 0)
 	{
 		currentPath = path;
-		float distance = SplineUtility.GetNearestPoint(currentPath.Spline,
-			currentPath.transform.InverseTransformPoint(transform.position), out var nearest, out float normalizedProgress);
+		SplineUtility.GetNearestPoint(currentPath.Spline,
+			currentPath.transform.InverseTransformPoint(transform.position), out _, out float normalizedProgress);
 		SplineMovement.Path = currentPath;
 		SplineMovement.ElapsedTime = normalizedProgress * currentPath.CalculateLength();
 	}
@@ -72,8 +72,15 @@ public class RoomWalker : MonoBehaviour
 
 	public void StartTransition(SplineContainer targetPath, Vector3 targetPosition)
 	{
+		if (SplineMovement.Speed < 0)
+			return;
+
 		SplineMovement.Path = transitionsContainer;
-		SplineMovement.ElapsedTime = 0;
+		SplineUtility.GetNearestPoint(currentPath.Spline,
+				currentPath.transform.InverseTransformPoint(transform.position), out _, out float normalizedProgress);
+
+		// normalizedProgress * SplineAnimate.;
+
 		currentTransition = new TransitionData
 		{
 			startPath = currentPath,
@@ -85,6 +92,8 @@ public class RoomWalker : MonoBehaviour
 		currentPath = null;
 
 		SplineMovement.OnPathEndReached += SplineMovement_OnTransitionEnded;
+
+		SplineMovement.ElapsedTime = 0;  
 	}
 
 	private void SplineMovement_OnTransitionEnded()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Bipolar
@@ -24,6 +25,15 @@ namespace Bipolar
 
 			list.Add(element);
 			return true;
+		}
+
+		public static void Shuffle<T>(this IList<T> list)
+		{
+			for (int n = 0; n < list.Count; n++)
+			{
+				int k = Random.Range(0, n + 1);
+				(list[n], list[k]) = (list[k], list[n]);
+			}
 		}
 	}
 

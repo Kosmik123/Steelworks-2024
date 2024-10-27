@@ -23,16 +23,17 @@ public class RoomObject : MonoBehaviour
 
 	public IEnumerable<Room> CurrentRooms => enteredRoomTriggersCounts.Select(visit => visit.room);
 
-	[SerializeField, ReadOnly]
-	private float timeScale;
-	public float TimeScale => timeScale;
+	public bool IsInRoom(Room room) => CurrentRooms.Contains(room);
 
-	private void RefreshTimeScale()
+	public float TimeScale
 	{
-		float scale = 1f;
-		foreach (var room in CurrentRooms)
-			scale *= room.LocalTimeSpeed;
-		timeScale = scale;
+		get
+		{
+			float scale = 1f;
+			foreach (var room in CurrentRooms)
+				scale *= room.LocalTimeSpeed;
+			return scale;
+		}
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -46,8 +47,6 @@ public class RoomObject : MonoBehaviour
 			enteredRoomTriggersCounts.Add(new RoomVisits(room, 1));
 		else
 			visit.enteredTriggersCount++;
-
-		RefreshTimeScale();
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -63,7 +62,5 @@ public class RoomObject : MonoBehaviour
 		visit.enteredTriggersCount--;
 		if (visit.enteredTriggersCount <= 0)
 			enteredRoomTriggersCounts.Remove(visit);
-
-		RefreshTimeScale();
 	}
 }

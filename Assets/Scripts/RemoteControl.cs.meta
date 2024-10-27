@@ -3,7 +3,10 @@ guid: 4197011de5b61d24d9e7c7f6ccb3f1c5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - grandpaController: {instanceID: 0}
+  - viewControlller: {instanceID: 0}
+  - roomControlSettings: {fileID: 11400000, guid: e0be450a1cf2f4144a2af5312dfc2d99, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

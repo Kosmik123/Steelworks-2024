@@ -10,6 +10,12 @@ public class RemoteControl : MonoBehaviour
 	[SerializeField]
 	private RoomControlSettings roomControlSettings;
 
+	private void Reset()
+	{
+		grandpaController = FindObjectOfType<GrandpaController>();	
+		viewControlller = FindObjectOfType<TVViewController>();
+	}
+
 	[Button]
 	public void Play()
 	{

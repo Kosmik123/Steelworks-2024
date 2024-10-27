@@ -1,7 +1,6 @@
 ﻿using Bipolar;
 using Cinemachine;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -35,8 +34,6 @@ public class Room : MonoBehaviour
 	private readonly List<Door> doors = new List<Door>();
 
 	public float DeltaTime => localTimeSpeed * Time.deltaTime;
-
-
 
 	public void AddDoor(Door door) => doors.Add(door);
 

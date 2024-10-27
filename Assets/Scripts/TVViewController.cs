@@ -1,3 +1,4 @@
+using Bipolar;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -32,6 +33,7 @@ public class TVViewController : MonoBehaviour
 
 	private void Awake()
 	{
+		rooms.Shuffle();	
 		RefreshCameras();
 	}
 
