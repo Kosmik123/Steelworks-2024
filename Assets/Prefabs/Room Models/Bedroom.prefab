@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6117233601194607527
+--- !u!1 &3421973575433949598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,73 +8,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4831674141039131704}
+  - component: {fileID: 4509611896244502215}
   m_Layer: 0
-  m_Name: Hall Model
+  m_Name: Bedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4831674141039131704
+--- !u!4 &4509611896244502215
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6117233601194607527}
+  m_GameObject: {fileID: 3421973575433949598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4375276924853497838}
+  - {fileID: 5913436987971397671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &263397375912748257
+--- !u!1001 &7858607859329098536
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4831674141039131704}
+    m_TransformParent: {fileID: 4509611896244502215}
     m_Modifications:
     - target: {fileID: 452127629275039807, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: depth
-      value: 3.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 452127629275039807, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: width
-      value: 5.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 768973826656780482, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 768973826656780482, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2465707741469913967, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_Name
-      value: Hall Surfaces
+      value: Bedroom Surfaces
       objectReference: {fileID: 0}
     - target: {fileID: 3553139470405557416, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3935037358000400455, guid: 5def8730879402749a38cc0b257abf70, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4506293169051373388, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506293169051373388, guid: 5def8730879402749a38cc0b257abf70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4506293169051373388, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.75
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4548597870912572175, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -116,21 +116,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4900048218217140805, guid: 5def8730879402749a38cc0b257abf70, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5804733934716450174, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5804733934716450174, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6127925938003542655, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6127925938003542655, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.75
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7519156918023118040, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalScale.x
@@ -142,69 +146,69 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7519156918023118040, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.75
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7811334961802260084, guid: 5def8730879402749a38cc0b257abf70, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
+      propertyPath: m_LocalScale.x
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7811334961802260084, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.75
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3079888853282037555, guid: 5def8730879402749a38cc0b257abf70, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6139354001304316499, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 884952896366921679}
+      addedObject: {fileID: 5533011601701195944}
     - targetCorrespondingSourceObject: {fileID: 3422006515208994538, guid: 5def8730879402749a38cc0b257abf70, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4616692646897496051}
+      addedObject: {fileID: 7831524492028900988}
   m_SourcePrefab: {fileID: 100100000, guid: 5def8730879402749a38cc0b257abf70, type: 3}
---- !u!1 &2961732604006710226 stripped
+--- !u!1 &4052183968692996475 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3079888853282037555, guid: 5def8730879402749a38cc0b257abf70, type: 3}
-  m_PrefabInstance: {fileID: 263397375912748257}
+  m_CorrespondingSourceObject: {fileID: 6139354001304316499, guid: 5def8730879402749a38cc0b257abf70, type: 3}
+  m_PrefabInstance: {fileID: 7858607859329098536}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &884952896366921679
+--- !u!114 &5533011601701195944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2961732604006710226}
+  m_GameObject: {fileID: 4052183968692996475}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a57f1452bed58ef42ad3e6ee98acc87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSize: {x: 5.5, y: 3}
-  <HolePosition>k__BackingField: {x: 1.6, y: -0.525}
+  wallSize: {x: 6, y: 3}
+  <HolePosition>k__BackingField: {x: -2.07, y: -0.525}
   <HoleSize>k__BackingField: {x: 1, y: 1.95}
---- !u!1 &3232087337254394379 stripped
+--- !u!1 &4787901438183202242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3422006515208994538, guid: 5def8730879402749a38cc0b257abf70, type: 3}
-  m_PrefabInstance: {fileID: 263397375912748257}
+  m_PrefabInstance: {fileID: 7858607859329098536}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4616692646897496051
+--- !u!114 &7831524492028900988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3232087337254394379}
+  m_GameObject: {fileID: 4787901438183202242}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a57f1452bed58ef42ad3e6ee98acc87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSize: {x: 3.5, y: 3}
-  <HolePosition>k__BackingField: {x: -0.44, y: -0.525}
+  wallSize: {x: 7, y: 3}
+  <HolePosition>k__BackingField: {x: 2, y: -0.525}
   <HoleSize>k__BackingField: {x: 1, y: 1.95}
---- !u!4 &4375276924853497838 stripped
+--- !u!4 &5913436987971397671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4548597870912572175, guid: 5def8730879402749a38cc0b257abf70, type: 3}
-  m_PrefabInstance: {fileID: 263397375912748257}
+  m_PrefabInstance: {fileID: 7858607859329098536}
   m_PrefabAsset: {fileID: 0}

@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSize: {x: 6, y: 3}
-  <HolePosition>k__BackingField: {x: -1.2, y: -0.525}
+  <HolePosition>k__BackingField: {x: -1.75, y: -0.525}
   <HoleSize>k__BackingField: {x: 1, y: 1.95}
 --- !u!1 &5130621218954616453 stripped
 GameObject:
