@@ -1,12 +1,11 @@
+using Cinemachine;
 using UnityEngine;
 
 public class CamerasManager : MonoBehaviour
 {
 	[SerializeField]
-	private Camera[] allCameras;
-	[SerializeField]
-	private RenderTexture renderTexture;
-
+	private CinemachineVirtualCamera[] allCameras;
+	
 	[SerializeField]
 	private int cameraIndex;
 	public int CameraIndex
@@ -19,15 +18,24 @@ public class CamerasManager : MonoBehaviour
 			value += count; 
 			value %= count;	
 			cameraIndex = value;
+			RefreshCameras();
 		}
 	}
 
-	[ContextMenu("Test")]
-	private void Test()
+	private void Awake()
 	{
-		CameraIndex = 200;
+		RefreshCameras();
 	}
 
+	private void RefreshCameras()
+	{
+		for (int i = 0; i < allCameras.Length; i++)
+			allCameras[i].enabled = i == cameraIndex;
+	}
 
-
+	[ContextMenu("Next Camera")]
+	public void NextCamera() => CameraIndex++;
+	
+	[ContextMenu("Previous Camera")]
+	public void PreviousCamera() => CameraIndex--;
 }
