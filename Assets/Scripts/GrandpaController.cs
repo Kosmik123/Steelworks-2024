@@ -4,6 +4,7 @@ public class GrandpaController : MonoBehaviour
 {
 	[SerializeField]
 	private Grandpa grandpa;
+	public Grandpa Grandpa => grandpa;
 
 	private void Update()
 	{

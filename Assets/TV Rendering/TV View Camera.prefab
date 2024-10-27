@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7076846317818438909}
   - component: {fileID: 6254629483567508312}
   - component: {fileID: 3119896740997512854}
-  - component: {fileID: 7399506545956198234}
+  - component: {fileID: 9183123568241633786}
   m_Layer: 0
   m_Name: TV View Camera
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7399506545956198234
+--- !u!114 &9183123568241633786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,8 +173,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4398259131404390416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00b5769661d32f488b2a3ccb54081d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 750ff55b07e9181468bd42b500bba86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allCameras: []
-  cameraIndex: 0
+  rooms: []
+  currentlyViewedRoomIndex: 0

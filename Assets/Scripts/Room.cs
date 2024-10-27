@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Cinemachine;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -21,11 +22,25 @@ public class Room : GrandpaPath
 		}
 	}
 
+	[SerializeField]
+	private CinemachineVirtualCamera virtualCamera;
+	public CinemachineVirtualCamera VirtualCamera => virtualCamera;
+
 	private readonly List<Door> doors = new List<Door>();
 
 	public float DeltaTime => localTimeSpeed * Time.deltaTime;
 
 	public void AddDoor(Door door) => doors.Add(door);
+
+	public bool IsViewed
+	{
+		set
+		{
+			virtualCamera.enabled = value;
+			if (value == false)
+				LocalTimeSpeed = 1;
+		}
+	}
 
 	public Door GetNearestDoor(Vector3 position)
 	{
