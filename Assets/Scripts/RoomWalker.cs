@@ -79,8 +79,6 @@ public class RoomWalker : MonoBehaviour
 		SplineUtility.GetNearestPoint(currentPath.Spline,
 				currentPath.transform.InverseTransformPoint(transform.position), out _, out float normalizedProgress);
 
-		// normalizedProgress * SplineAnimate.;
-
 		currentTransition = new TransitionData
 		{
 			startPath = currentPath,

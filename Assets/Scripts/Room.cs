@@ -1,5 +1,6 @@
 ﻿using Bipolar;
 using Cinemachine;
+using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -31,7 +32,8 @@ public class Room : MonoBehaviour
 	private CinemachineVirtualCamera virtualCamera;
 	public CinemachineVirtualCamera VirtualCamera => virtualCamera;
 
-	private readonly List<Door> doors = new List<Door>();
+	[SerializeField, ReadOnly]
+	private List<Door> doors = new List<Door>();
 
 	public float DeltaTime => localTimeSpeed * Time.deltaTime;
 
